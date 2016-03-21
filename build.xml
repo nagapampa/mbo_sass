@@ -1,0 +1,26 @@
+<project>
+    <property file="build.properties"/>
+    <target name="sass">
+        <echo message="Compiling sass files to css..." />
+        <!-- create the css destination dir if it doesn't already exist -->
+        <property name="css-dest" location="${css.dir}"/>
+        <echo message="Creating directory at ${css.dir} [if it doesn't yet exist]" />
+        <mkdir dir="${css-dest}" />
+        <!-- create subdirs if necessary -->
+        <echo message="Creating css directories (and temporary .css files) for .sass to be compiled..." />
+        <touch mkdirs="true">
+            <fileset dir="${sass.dir}" includes="**/*.sass" excludes="**/_*" />
+            <mapper type="glob" from="*.sass" to="${css.dir}/*.css"/>
+        </touch>
+        <echo message="Running sass executable against sass files and compiling to CSS directory [${css-dest}] " />
+        <!-- run sass executable -->
+        <apply executable="sass.bat" dest="${css-dest}" verbose="true" force="true" failonerror="true">
+            <arg value="--unix-newlines" />
+            <srcfile />
+            <targetfile />
+            <fileset dir="${sass.dir}" includes="**/*.sass" excludes="**/_*" />
+            <mapper type="glob" from="*.sass" to="*.css"/>
+        </apply>
+        <echo message="Done compiling sass files!" />
+    </target>
+</project>
