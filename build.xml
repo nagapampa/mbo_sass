@@ -9,8 +9,8 @@
         <!-- create subdirs if necessary -->
         <echo message="Creating css directories (and temporary .css files) for .sass to be compiled..." />
         <touch mkdirs="true">
-            <fileset dir="${sass.dir}" includes="**/*.sass" excludes="**/_*" />
-            <mapper type="glob" from="*.sass" to="${css.dir}/*.css"/>
+            <fileset dir="${sass.dir}" includes="**/*.scss" excludes="**/_*" />
+            <mapper type="glob" from="*.scss" to="${css.dir}/*.css"/>
         </touch>
         <echo message="Running sass executable against sass files and compiling to CSS directory [${css-dest}] " />
         <!-- run sass executable -->
@@ -18,8 +18,8 @@
             <arg value="--unix-newlines" />
             <srcfile />
             <targetfile />
-            <fileset dir="${sass.dir}" includes="**/*.sass" excludes="**/_*" />
-            <mapper type="glob" from="*.sass" to="*.css"/>
+            <fileset dir="${sass.dir}" includes="**/*.scss" excludes="**/_*" />
+            <mapper type="glob" from="*.scss" to="*.css"/>
         </apply>
         <echo message="Done compiling sass files!" />
     </target>
