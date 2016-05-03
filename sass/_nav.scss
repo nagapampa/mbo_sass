@@ -1,20 +1,47 @@
-nav {
-  background-color: $background-color;
+.navbar, .navbar-inverse {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    background-image: none;
+}
 
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: $secondary-color;
+    background-image: none;
+}
 
-  li {
-    display: inline-block;
-  }
+.navbar {
 
-  a {
-    display: block;
-    padding: 6px 12px;
-    text-decoration: none;
-    color: $secondary-color;
-  }
+	li {
+
+		a {
+		  	color: $nav-color;
+		  	text-transform: uppercase;
+		    display: block;
+		    font-size: 1.25em;
+		    text-decoration: none;
+		  }
+
+	}
+
+}
+
+.navbar-inverse .navbar-nav>li> {
+	a {
+		color: $nav-color;
+	}
+
+	a:hover {
+		color: #de521f;
+	}
+    
+}
+
+.navbar-brand {
+	
+	img {
+		border: 8px solid $primary-color;
+		background-color: #fff;
+		padding: 6px;
+	}
+
 }

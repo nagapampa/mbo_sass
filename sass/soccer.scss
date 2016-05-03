@@ -1,0 +1,23 @@
+/* colors
+	yellow: #ffdc00
+	red: #b31a20
+	blue: #00aeef
+
+	font
+	Impact, Charcoal, sans-serif
+	font-color: #666666
+*/
+
+$primary-color: #ffdc00;
+$secondary-color: #b31a20;
+$teriary-color: #00aeef;
+
+$nav-color: #000;
+
+$font:    Impact, Charcoal, sans-serif;
+$font-color: #666666;
+
+@import "common";
+@import "nav";
+@import "footer";
+@import "product";

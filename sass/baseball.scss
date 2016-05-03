@@ -1,0 +1,23 @@
+/* colors
+	blue: #061c33
+	green: #99ca0a
+	orange: #ff4800
+
+	font
+	Verdana, Geneva, sans-serif
+	font-color: #666666
+*/
+
+$primary-color: #061c33;
+$secondary-color: #99ca0a;
+$teriary-color: #ff4800;
+
+$nav-color: #fff;
+
+$font:    Verdana, Geneva, sans-serif;
+$font-color: #666666;
+
+@import "common";
+@import "nav";
+@import "footer";
+@import "product";

@@ -1,0 +1,23 @@
+/* colors
+	blue: #00a7df
+	red: #E32225
+	orange: #de521f
+
+	font
+	Arial, Helvetica, sans-serif
+	font-color: #666666
+*/
+
+$primary-color: #00a7df;
+$secondary-color: #E32225;
+$teriary-color: #de521f;
+
+$nav-color: #fff;
+
+$font:    Arial, Helvetica, sans-serif;
+$font-color: #666666;
+
+@import "common";
+@import "nav";
+@import "footer";
+@import "product";

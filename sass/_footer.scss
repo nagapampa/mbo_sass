@@ -1,0 +1,19 @@
+.footer{	
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	background-color: $secondary-color;
+	color: #fff;
+}
+
+.info {
+	font-size: 1.25em;
+	padding: 10px;
+}
+
+.important {
+  @extend .info;
+	text-transform: uppercase;
+}
